@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discount Calculator</title>
+  </head>
+  <body>
+    <h1>30% Discount Calculator</h1>
+    <p>Original Price: Rs. 10000</p>
+    <p>Discounted Price: <span id="discounted-price">Rs. 0</span></p>
+    <button id="calculate-button">Calculate Discount</button>
+
+    <script>
+      document
+        .getElementById("calculate-button")
+        .addEventListener("click", function () {
+          // Original price
+          const originalPrice = 10000;
+
+          // Calculate the discounted price
+          const discountedPrice = originalPrice * 0.7;
+
+          // Display the result
+          document.getElementById(
+            "discounted-price"
+          ).innerText = `Rs. ${discountedPrice.toFixed(2)}`;
+        });
+    </script>
+  </body>
+</html>
